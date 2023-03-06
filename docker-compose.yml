@@ -1,0 +1,6 @@
+services:
+  cyberchef:
+    build:
+      context: .
+    ports:
+      - "80:80"
