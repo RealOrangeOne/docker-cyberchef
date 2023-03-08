@@ -5,3 +5,6 @@ RUN wget -c https://github.com/gchq/CyberChef/releases/download/v9.55.0/CyberChe
 
 # Copy some overrides for a more secure environment
 COPY ./nginx-extra.conf /etc/nginx/extra.conf
+
+# Copy in some extra files
+COPY ./extra /srv
