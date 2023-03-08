@@ -28,6 +28,10 @@ For that reason, this container has a few additional protections to help secure 
 - Add a `Content-Security-Policy` to prevent the browser from communicating with any other sites
 - Add a `Permissions-Policy` to prevent access to more "interesting" browser features
 - Just `nginx` on the server - no additional complexities
+- Prevent embedding in an `iframe`
+- Don't send `Referer` header when navigating to related links
+- Don't cache files, always revalidate from the server
+- Prevent search engines from indexing content on the page
 
 ## Customization
 
