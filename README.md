@@ -32,6 +32,7 @@ For that reason, this container has a few additional protections to help secure 
 - Don't send `Referer` header when navigating to related links
 - Don't cache files, always revalidate from the server
 - Prevent search engines from indexing content on the page
+- Clear all site data when closing the page
 
 ## Customization
 
