@@ -1,7 +1,10 @@
 FROM theorangeone/website-server
 
+# renovate: datasource=github-tags depName=gchq/cyberchef
+ENV CYBERCHEF_VERSION=9.55.0
+
 # Download pre-built cyberchef
-RUN wget -c https://github.com/gchq/CyberChef/releases/download/v9.55.0/CyberChef_v9.55.0.zip -O - | unzip -d /srv - && mv /srv/CyberChef_*.html /srv/index.html
+RUN wget -c https://github.com/gchq/CyberChef/releases/download/v${CYBERCHEF_VERSION}/CyberChef_v${CYBERCHEF_VERSION}.zip -O - | unzip -d /srv - && mv /srv/CyberChef_*.html /srv/index.html
 
 # Copy some overrides for a more secure environment
 COPY ./nginx-extra.conf /etc/nginx/extra.conf
