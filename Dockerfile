@@ -1,7 +1,7 @@
 FROM theorangeone/website-server
 
 # renovate: datasource=github-tags depName=gchq/cyberchef
-ENV CYBERCHEF_VERSION=v10.2.0
+ENV CYBERCHEF_VERSION=v10.4.0
 
 # Download pre-built cyberchef
 RUN wget -c https://github.com/gchq/CyberChef/releases/download/${CYBERCHEF_VERSION}/CyberChef_${CYBERCHEF_VERSION}.zip -O - | unzip -d /srv - && mv /srv/CyberChef_*.html /srv/index.html
